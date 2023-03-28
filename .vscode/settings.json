@@ -1,0 +1,7 @@
+{
+  "explorer.fileNesting.enabled": false,
+  "explorer.compactFolders": false,
+  "liveSassCompile.settings.autoprefix": [
+  ],
+  "editor.fontLigatures": true
+}

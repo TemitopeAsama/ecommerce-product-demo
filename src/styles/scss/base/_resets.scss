@@ -1,0 +1,97 @@
+// PRIMARY COLORS
+$dark-orange: hsl(26, 100%, 55%);
+$pale-orange: hsl(25, 100%, 94%);
+
+// SECONDARY COLORS
+$blue-400: hsl(220, 13%, 13%);
+$blue-300: hsl(219, 9%, 45%);
+$blue-200: hsl(220, 14%, 75%);
+$blue-100: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$black-background: hsla(0, 0%, 0%, 75%);
+
+//FONT
+$font-family: 'Kumbh Sans', 'Inter', sans-serif;
+$fw-regular: 400;
+$fw-bold: 700;
+
+// RESETS
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+    max-width: 3850px;
+    margin: 0 auto;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+    overflow-wrap: break-word;
+    font: inherit;
+    font-family: 'HelveticaNeueCyr', 'Inter UI', sans-serif;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
