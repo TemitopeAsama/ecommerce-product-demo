@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Header from '@/src/components/header/Header'
+import useCart from '@/src/context/cartContext'
 import MobileNav from '@/src/components/sidebar-nav/MobileNav'
 import ProductDetails from '@/src/components/product-details/ProductDetails'
 
 
 export default function Home() {
-    const [openMenu, setOpenMenu] = useState<boolean>(false)
+  const { openMenu } = useCart()
   return (
     <>
       <Head>
@@ -15,8 +16,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {openMenu && <MobileNav setOpenMenu={setOpenMenu}/>}
-      <Header setOpenMenu={setOpenMenu}/>
+      {openMenu && <MobileNav />}
+      <Header />
       <ProductDetails />
     </>
   )

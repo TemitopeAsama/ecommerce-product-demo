@@ -1,13 +1,13 @@
 import React from 'react'
 
 type CTAButtonProps = {
-  children: React.ReactNode
+  children: React.ReactNode,
+  handleClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
-
-const CTAButton = ({children}: CTAButtonProps) => {
+const CTAButton = ({children, handleClick}: CTAButtonProps) => {
   return (
-    <button>
+    <button onClick={handleClick}>
       {children}
     </button>
   )

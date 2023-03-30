@@ -1,7 +1,8 @@
 import React, { PropsWithChildren } from 'react'
 
 type IconButtonProps = {
-  ariaText: string
+  ariaText: string,
+  className: string,
   handleClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 

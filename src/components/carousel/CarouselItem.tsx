@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-type StaticImageData = {
+export type StaticImageData = {
     blurDataURL?: string | undefined,
     blurHeight?: number | undefined,
     blurWidth?: number | undefined,

@@ -1,24 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import CarouselItem from './CarouselItem'
-import { carouselItems } from './MobileCarousel'
+import useCart from '@/src/context/cartContext'
+// import { carouselItems } from './MobileCarousel'
 
 const DesktopCarousel = () => {
+    const { carouselItems } = useCart()
+    const [currentSlide, setCurrentSlide] = useState(0)
     
   return (
     <div>
         <div>
-            {carouselItems.map((item) => {
-                return <CarouselItem key={item.key} image={item.image}/>
-            })}
+            <CarouselItem key={carouselItems[currentSlide].key} image={carouselItems[currentSlide].image}/>
         </div>
         <div className='button__container'>
             {carouselItems.map((item) => {
                 return (
-                <button className="carousel__navigation" key={item.key}>
+                <button className="carousel__navigation" key={item.key} onClick={(e) => {item.key > 0 && setCurrentSlide(item.key - 1)}}>
                     <Image
                         src={item.image}
-                        alt="Picture of the author"
+                        alt="Sneaker showcase slide"
                         width={50}
                         height={50}
                         style={{objectFit:"cover"}}
