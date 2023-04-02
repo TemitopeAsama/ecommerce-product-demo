@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Head from 'next/head'
+import useWindowResize from '@/src/lib/useWindowResize'
 import Header from '@/src/components/header/Header'
 import useCart from '@/src/context/cartContext'
 import MobileNav from '@/src/components/sidebar-nav/MobileNav'
@@ -7,6 +8,7 @@ import ProductDetails from '@/src/components/product-details/ProductDetails'
 
 
 export default function Home() {
+  const { innerWidth } = useWindowResize()
   const { openMenu } = useCart()
   return (
     <>
@@ -16,9 +18,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {openMenu && <MobileNav />}
-      <Header />
-      <ProductDetails />
+      <div className="max__width__wrapper">
+        {openMenu && innerWidth! < 768 && <MobileNav />}
+        <Header />
+        <ProductDetails />
+      </div>
     </>
   )
 }

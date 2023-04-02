@@ -11,21 +11,21 @@ const CartItem = () => {
     setCartItemCount(0)
   }
   return (
-    <div>
-        <div className='product__thumbnail'>
+    <div className='cart__item'>
+        <div className='product__thumbnail' style={{ height: '60px', width: '60px', position: 'relative', borderRadius: '8px' }}>
                     <Image
                         src={imageThumbnail}
                         alt="An image of the Fall Limited Edition Sneakers"
-                        width={50}
-                        height={50}
-                        style={{objectFit:"cover"}}
+                        style={{ objectFit:"cover", borderRadius: '0.3rem' }}
+                        fill={true}
                     />
         </div>
         <div>
-            <span></span>
+            {/* <span>{}</span> */}
             <div className="total__price">
-                <span>$125.00 × {cartItemCount}</span>
-                <div>{125 * cartItemCount}</div>
+                <div className="item__name">Fall Limited Edition Sneakers</div>
+                <span className='item__count'>$125.00 × {cartItemCount}</span>
+                <span className='total'>${125 * cartItemCount}</span>
             </div>
         </div>
         <IconButton ariaText='Delete item from cart' className='remove__from__cart' handleClick={handleRemoveFromCart}>

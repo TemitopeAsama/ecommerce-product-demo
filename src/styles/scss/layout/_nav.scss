@@ -1,0 +1,68 @@
+@use '../abstract/variables' as *;
+
+.sidebar__nav {
+    position: absolute;
+    background-color: $white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100vh;
+    width: 250px;
+    padding: 1.5rem;
+
+    nav {
+        margin-block-start: 4rem;
+        li {
+            padding: 1rem 0;
+            font-size: 1.5rem;
+            font-weight: $fw-bold;
+            color: $black;
+    
+            &:hover {
+                border-bottom: $blue-300;
+            }
+        }
+    }
+    
+}
+
+
+.desktop__nav {
+    ul {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        list-style: none;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+
+        li a {
+            position: relative;
+            font-weight: $fw-medium;
+            color: $blue-300;
+            cursor: pointer;
+            display: block;
+            height: 100%;
+            
+            &:hover {
+                color: $black;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: none;
+                bottom: -200%;
+                background-color: $dark-orange;
+                height: 5px;
+                width: 100%;
+                transition: width 1s ease-in;
+	        }
+
+            &:hover:after {
+                display: block;
+            }
+        }
+    }
+}

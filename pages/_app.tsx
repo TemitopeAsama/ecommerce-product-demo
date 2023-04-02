@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
 import { CartProvider } from '@/src/context/cartContext'
-import '../src/styles/css/styles.css'
+import '../src/styles/scss/styles.scss'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

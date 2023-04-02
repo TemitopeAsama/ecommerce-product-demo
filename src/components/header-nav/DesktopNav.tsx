@@ -2,7 +2,7 @@ import React from 'react'
 
 const DesktopNav = () => {
   return (
-    <nav>
+    <nav className='desktop__nav'>
         <ul>
           <li><a href="#">Collections</a></li>
           <li><a href="#">Men</a></li>

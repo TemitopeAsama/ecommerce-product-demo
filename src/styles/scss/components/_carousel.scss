@@ -1,0 +1,70 @@
+@use '../abstract/variables' as *;
+
+.mobile__carousel {
+    position: relative;
+    width: 100%;
+
+    .arrow__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        z-index: 10;
+        padding: 1rem;
+
+            .carousel__btn {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;  
+            }
+    }
+
+
+}
+
+
+.desktop__carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .desktop__carousel__container {
+        border-radius: 1rem;
+        flex: 1 1 400px;
+        width: 450px;
+
+        img {
+            border-radius: 1rem;
+        }
+    }
+
+    .button__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .carousel__navigation {
+            border-radius: 1rem;
+            // border: 2px solid red;
+            width: 80px;
+
+            
+        }
+
+        img {
+            border-radius: .5rem;
+
+            &:hover {
+                border: 2px solid $dark-orange;
+            }
+        }
+    }
+}

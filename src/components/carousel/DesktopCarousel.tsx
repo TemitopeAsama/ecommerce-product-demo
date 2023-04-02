@@ -9,9 +9,9 @@ const DesktopCarousel = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
     
   return (
-    <div>
+    <div className='desktop__carousel'>
         <div>
-            <CarouselItem key={carouselItems[currentSlide].key} image={carouselItems[currentSlide].image}/>
+            <CarouselItem key={carouselItems[currentSlide].key} image={carouselItems[currentSlide].image} className='desktop__carousel__container'/>
         </div>
         <div className='button__container'>
             {carouselItems.map((item) => {
@@ -20,9 +20,7 @@ const DesktopCarousel = () => {
                     <Image
                         src={item.image}
                         alt="Sneaker showcase slide"
-                        width={50}
-                        height={50}
-                        style={{objectFit:"cover"}}
+                        style={{objectFit:"cover", width: '100%', height: '100%'}}
                     />
                 </button>
             )})}

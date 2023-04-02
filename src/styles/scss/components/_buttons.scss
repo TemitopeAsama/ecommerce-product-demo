@@ -1,0 +1,56 @@
+@use '../abstract/variables' as *;
+
+// PRODUCT COUNTER BUTTON
+.product__count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: $blue-100;
+    margin-block: 1.5rem;
+
+    .count {
+        font-size: 1rem;
+        font-weight: $fw-bold;
+        color: $black;
+    }
+
+    .counter__btn {
+        background-color: transparent;
+    }
+}
+
+
+// CTA BUTTON 'ADD-T0-CART'
+.add__to__cart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: $dark-orange;
+    color: $white;
+    font-size: 1rem;
+    font-weight: $fw-bold;
+    cursor: pointer;
+
+    path {
+        fill: white;
+    }
+}
+
+.checkout {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: $dark-orange;
+    color: $white;
+    font-size: 1rem;
+    font-weight: $fw-bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}

@@ -11,17 +11,18 @@ export type StaticImageData = {
 }
 
 type CarouselImageProps = {
-    image: StaticImageData
+    image: StaticImageData,
+    className: string
 }
 
-const CarouselItem = ({image}: CarouselImageProps) => {
+const CarouselItem = ({image, className}: CarouselImageProps) => {
   return (
-    <div>
+    <div style={{ position: 'relative' }} className={className}>
         <Image
         src={image}
         alt="Picture of the author"
-        width={500}
-        height={500}
+        style={{ height: '100%', objectFit: "cover" }}
+        priority={true}
         />
     </div>
   )

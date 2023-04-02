@@ -1,0 +1,84 @@
+@use '../abstract/variables' as *;
+@use '../utilities/breakpoints' as *;
+
+.cart__container {
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    top: 102px;
+    right: 10px;
+    z-index: 100;
+    background-color: $white;
+    border-radius: 0.5rem;
+    
+    @include media ('<500') {
+        width: 95vw;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .cart__header {
+        font-size: 1rem;
+        font-weight: $fw-bold;
+        color: $black;
+        padding: 1.5rem;
+        border-bottom: 1px solid $blue-300;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: $fw-bold;
+            color: $black;
+        }
+
+        .close__btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .empty__cart__body {
+        position: absolute;
+        left: 50%;
+        top: 57%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-weight: $fw-bold;
+        color: $blue-300;
+    }
+
+    .cart__body {
+        padding: 1.5rem;
+        
+        
+        .cart__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+
+            .item__name,
+            .item__count {
+                font-size: 1rem;
+                font-weight: $fw-medium;
+                color: $blue-300;
+                line-height: 24px;
+            }
+
+            .total {
+                margin-inline-start: 5px;
+                font-weight: $fw-black;
+            }
+
+        }
+
+    }
+
+    
+}

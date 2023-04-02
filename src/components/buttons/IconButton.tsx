@@ -6,9 +6,9 @@ type IconButtonProps = {
   handleClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
-const IconButton = ({children, ariaText, handleClick}: PropsWithChildren<IconButtonProps>) => {
+const IconButton = ({children, ariaText, handleClick, className}: PropsWithChildren<IconButtonProps>) => {
   return (
-    <button className='hamburger__menu' onClick={handleClick} aria-labelledby="visually__hidden">
+    <button className={className} onClick={handleClick} aria-labelledby="visually__hidden">
         {children}
         <span id="visually__hidden" hidden>{ariaText}</span>
     </button>

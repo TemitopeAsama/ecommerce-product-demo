@@ -1,0 +1,108 @@
+@use '../abstract/variables' as *;
+@use '../utilities/breakpoints' as *;
+
+main {
+    height: 87vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+
+    @include media ('<tablet') {
+        height: unset;
+        padding: 0;
+    }
+
+    .product__details {
+        padding: 1rem 1.5rem;
+        flex: 1 1 400px;
+        max-width: 500px;
+
+        h1 {
+            font-size: 1rem;
+            font-weight: $fw-bold;
+            color: $dark-orange;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-block-end: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: $fw-bold;
+            color: $black;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: $fw-regular;
+            color: $blue-300;
+            margin-block: 1rem;
+            line-height: 32px;
+        }
+
+        .pricing__info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // align-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+
+            .current__pricing {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+
+                .product__price {
+                    font-size: 2rem;
+                    font-weight: $fw-black;
+                    color: $black;
+                }
+
+                .product__discount {
+                    font-size: 1rem;
+                    font-weight: $fw-bold;
+                    color: $dark-orange;
+                    background-color: $pale-orange;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                }
+            }
+            
+            .old__pricing {
+                font-size: 1rem;
+                font-weight: $fw-bold;
+                color: $blue-300;
+                text-decoration: line-through;
+            }
+        }
+
+        .product__buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+            .product__count {
+                flex: 2 1 150px;
+                // border: 2px solid red;
+            }
+
+            .cta__wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: unset;
+                flex: 4 1 200px;
+                // border: 2px solid red;
+
+                .add__to__cart {
+                    margin: 0;
+                }
+            }
+        }
+       
+    }
+}

@@ -6,23 +6,27 @@ const Cart = () => {
   const { isInCart } = useCart()
   if(isInCart) {
         return (
-          <>
-          <div className="cart__header">
-            Cart
+          <div className='cart__container'>
+            <div className="cart__header">
+              Cart
+            </div>
+            <div className="cart__body">
+                <CartItem/>
+                <CTAButton className='checkout'>
+                  Checkout
+                </CTAButton>
+            </div>
           </div>
-            <CartItem/>
-            <CTAButton>
-              Checkout
-            </CTAButton>
-          </>
         )
   }
   return (
-    <div>
+    <div className='cart__container'>
       <div className="cart__header">
         Cart
       </div>
-      Your Cart is Empty
+      <div className="empty__cart__body">
+          Your Cart is Empty
+      </div>
     </div>
   )
 }
