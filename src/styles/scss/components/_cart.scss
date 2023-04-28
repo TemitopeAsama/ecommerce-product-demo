@@ -5,14 +5,17 @@
     width: 400px;
     height: 250px;
     position: absolute;
-    top: 102px;
-    right: 10px;
+    top: 60px;
+    right: 90px;
     z-index: 100;
     background-color: $white;
     border-radius: 0.5rem;
+    box-shadow: -2px 2px 20px $blue-200;
     
-    @include media ('<500') {
+    @include media ('<=500px') {
+        position: absolute;
         width: 95vw;
+        top: 102px;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -23,7 +26,7 @@
         font-weight: $fw-bold;
         color: $black;
         padding: 1.5rem;
-        border-bottom: 1px solid $blue-300;
+        border-bottom: 1px solid $blue-200;
 
         h2 {
             font-size: 1.5rem;

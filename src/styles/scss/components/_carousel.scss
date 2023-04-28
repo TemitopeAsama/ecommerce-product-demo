@@ -37,12 +37,14 @@
     gap: 2rem;
 
     .desktop__carousel__container {
+        overflow: hidden;
         border-radius: 1rem;
         flex: 1 1 400px;
         width: 450px;
 
         img {
             border-radius: 1rem;
+            // animation: carouselImageAnimation 0.3s ease;
         }
     }
 
@@ -52,18 +54,30 @@
         align-items: center;
 
         .carousel__navigation {
-            border-radius: 1rem;
-            // border: 2px solid red;
-            width: 80px;
-
-            
+            border-radius: .5rem;
+            width: 80px;           
         }
 
         img {
             border-radius: .5rem;
+            object-fit: cover; 
+            width: 100%; 
+            height: 100%; 
+            padding: 2px;
 
             &:hover {
-                border: 2px solid $dark-orange;
+                opacity: 0.8;
+                transition: opacity .3s ease-in;
+            }
+        }
+
+        @keyframes carouselImageAnimation {
+            0% {
+                transform: translateX(-50%);
+                opacity: 0;
+            } 100% {
+                transform: translateX(100%);
+                opacity: 1;
             }
         }
     }

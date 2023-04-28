@@ -46,15 +46,19 @@ main {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            // align-content: center;
-            flex-wrap: wrap;
+            // flex-wrap: wrap;
             margin-bottom: 1rem;
+
+            @include media ('>=tablet') {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: .5rem;
+            }
 
             .current__pricing {
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                gap: 1rem;
+                gap: .5rem;
 
                 .product__price {
                     font-size: 2rem;
@@ -87,7 +91,6 @@ main {
 
             .product__count {
                 flex: 2 1 150px;
-                // border: 2px solid red;
             }
 
             .cta__wrapper {
@@ -95,8 +98,7 @@ main {
                 align-items: center;
                 justify-content: center;
                 height: unset;
-                flex: 4 1 200px;
-                // border: 2px solid red;
+                flex: 4 1 250px;
 
                 .add__to__cart {
                     margin: 0;

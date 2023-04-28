@@ -22,7 +22,7 @@ const CarouselItem = ({image, className}: CarouselImageProps) => {
         src={image}
         alt="Picture of the author"
         style={{ height: '100%', objectFit: "cover" }}
-        priority={true}
+        // priority={true}
         />
     </div>
   )

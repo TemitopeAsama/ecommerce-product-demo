@@ -1,0 +1,38 @@
+@mixin flexStyles($display, $justify-content, $align-items) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin positionStyles($position, $width: 'auto', $top: 'auto', $bottom: 'auto', $left: 'auto', $right: 'auto') {
+    position: $position;
+    @if $width == 'auto' {
+        width: auto;
+    } @else {
+        width: $width;
+    }
+    @if $top == 'auto' {
+        top: auto;
+    } @else {
+        top: $top;
+    }
+    @if $bottom == 'auto' {
+        bottom: auto;
+    } @else {
+        bottom: $bottom;
+    }
+    @if $left == 'auto' {
+        left: auto;
+    } @else {
+        left: $left;
+    }
+    @if $right == 'auto' {
+        right: auto;
+    } @else {
+        right: $right;
+    }
+}
+
+@mixin fontStyles() {
+    
+}

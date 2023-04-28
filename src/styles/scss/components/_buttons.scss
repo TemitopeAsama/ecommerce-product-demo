@@ -38,6 +38,11 @@
     font-weight: $fw-bold;
     cursor: pointer;
 
+    &:hover {
+        opacity: 0.8;
+        transition: opacity .3s ease-in;
+    }
+
     path {
         fill: white;
     }
@@ -53,4 +58,19 @@
     font-weight: $fw-bold;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+}
+
+.view__cart {
+    position: relative;
+
+    span {
+        position: absolute;
+        top: -10px;
+        font-size: .6rem;
+        font-weight: $fw-bold;
+        background-color: $dark-orange;
+        color: $white;
+        border-radius: 45%;
+        padding: 0.2rem 0.4rem;
+    }
 }

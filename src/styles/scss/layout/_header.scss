@@ -6,20 +6,25 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 13vh;
-    padding: 0 1.5rem 0 .5rem;
+    padding: 1rem;
     border-block-end: 1px solid $blue-200;
-    // padding: 1.5rem 1.5rem 1.5rem .5rem; // changed the viewBox property of my svg and tweaked the  to achieve the right visual balance xoxo
 
     .left__mobile {
         padding: 0;
         display: flex;
+        align-items: center;
         gap: 1rem;
 
        h2 {
             font-size: 2.5rem;
             font-weight: $fw-bold;
-            margin-top: -6px;
+            margin-top: -7px;
             letter-spacing: -2px;
+        }
+
+        img {
+            width: 1.2rem;
+            height: 1.2rem;
         }
 
         nav ul {
@@ -27,22 +32,40 @@ header {
         }
     }
 
-    .right {
+    .right__mobile {
         display: flex;
         gap: 1rem;
         align-items: center;
 
-        img {
-            width: 2rem;
-            height: 2rem;
+        .view__cart img {
+            width: 1.5rem;
+            height: 1.5rem;
         }
 
+        a {
+            display: block;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            overflow: hidden;
+            img {
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            &:hover,
+            &:focus {
+                border: 2px solid $dark-orange;
+            }
+        }
     }
 
     .left__desktop {
         display: flex;
         gap: 4rem;
         align-items: center;
+        justify-content: space-around;
 
         h2 {
             font-size: 2.5rem;
@@ -53,6 +76,36 @@ header {
 
         nav ul {
             display: flex;
+        }
+    }
+
+    .right__desktop {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .view__cart img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        a {
+            display: block;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            overflow: hidden;
+
+            img {
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            &:hover,
+            &:focus {
+                border: 2px solid $dark-orange;
+            }
         }
     }
 }
